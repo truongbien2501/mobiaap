@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Write To Kivy
+title = DIENBAO
 
 # (str) Package name
-package.name = KivyTest
+package.name = DIENBAO
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.YourName
