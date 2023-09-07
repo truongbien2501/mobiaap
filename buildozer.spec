@@ -7,7 +7,7 @@ title = DIENBAO
 package.name = DIENBAO
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.YourName
+package.domain = org.DIENBAO
 
 # (str) Source code where the main.py live
 source.dir = .
