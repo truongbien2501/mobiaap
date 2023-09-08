@@ -37,7 +37,7 @@ class FTPApp(App):
         ftp_host = '113.160.225.111'
         ftp_user = 'kttvttbdb'
         ftp_password = '618778'
-        file_path = '/Dulieu-Bantinkttvttb/5-Quang Ngai/PHAN MEM/DIENBAO'
+        file_path = 'Dulieu-Bantinkttvttb/5-Quang Ngai/PHAN MEM/DIENBAO'
 
         # Kết nối đến máy chủ FTP
         ftp = FTP(ftp_host)
