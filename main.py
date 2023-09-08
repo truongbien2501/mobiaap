@@ -72,24 +72,11 @@ class FTPApp(App):
         ftp.quit()
 
     def nhandien_button_click(self, instance):
-        try:
-            ac= self.ftp_sever('DATA54292.TXT')
-            sg = self.ftp_sever('DATA53992.TXT')
-            contents = sg[:sg.index('=')+1] + '\n' + ac[ac.index('71542'):ac.index('=')+1]
-            self.text_box.text = contents
-            # self.my_text.text = contents   # Thay đổi nội dung của text khi button được nhấn
-        except:
-            content = BoxLayout(orientation='vertical')
-            content.add_widget(Label(text='Không thể kết nối tới máy chủ!'))
-            # Thêm nút tắt thông báo
-            dismiss_button = Button(text='Đóng')
-            content.add_widget(dismiss_button)
-            # Tạo popup với nội dung và nút tắt thông báo
-            popup = Popup(title='Thông báo', content=content, size_hint=(None, None), size=(400, 200))
-            # Thiết lập hàm callback khi nút tắt được nhấn
-            dismiss_button.bind(on_release=popup.dismiss)
-            # Hiển thị thông báo
-            popup.open()
+        ac= self.ftp_sever('DATA54292.TXT')
+        sg = self.ftp_sever('DATA53992.TXT')
+        contents = sg[:sg.index('=')+1] + '\n' + ac[ac.index('71542'):ac.index('=')+1]
+        self.text_box.text = contents
+        # self.my_text.text = contents   # Thay đổi nội dung của text khi button được nhấn
 
         
     def send_button_click(self, instance):
