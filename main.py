@@ -72,11 +72,12 @@ class FTPApp(App):
         ftp.quit()
 
     def nhandien_button_click(self, instance):
+        now = datetime.now()
+        batdau = now.strftime('%d/%m/%Y')+ '.\n' + 'TVS01 DDDD ' + now.strftime('%d%H00') + '\n' + 'HHXX ' + now.strftime('%d%H1') + '\n'
         ac= self.ftp_sever('DATA54292.TXT')
         sg = self.ftp_sever('DATA53992.TXT')
-        contents = sg[:sg.index('=')+1] + '\n' + ac[ac.index('71542'):ac.index('=')+1]
-        self.text_box.text = contents
-        # self.my_text.text = contents   # Thay đổi nội dung của text khi button được nhấn
+        contents =  sg[sg.index('71539'):sg.index('=')+1] + '\n' + ac[ac.index('71542'):ac.index('=')+1]
+        self.text_box.text =  batdau + contents  + '\n\n' + 'NNNN'
 
         
     def send_button_click(self, instance):
